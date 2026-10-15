@@ -6,6 +6,12 @@ Polymarket is a prediction market where users trade on the outcome of future eve
 
 **Every link here was checked on 2026-08-11.** Entries that 404, resolve to a parked domain, or point at a Chrome Web Store page that no longer exists have been removed rather than carried forward. If you find a dead link, [open an issue](../../issues).
 
+## Featured
+
+- [PredCopy](https://predcopy.com/) - Copy trading. Whale tracking and composite trader scoring paired with an execution engine that mirrors a followed wallet under configurable bet sizing, max exposure, and stale position exit rules. Telegram alerts and an MCP server.
+- [PredRadar](https://predradar.com/) - Arbitrage. Cross-platform aggregator for Polymarket, Kalshi, and Betfair with live prices, an arbitrage scanner, a JSON API, and an MCP server.
+- [predtools](https://predtools.com/) - Trading bots. Source-available trading bots for Polymarket and Kalshi with a strategy library, sold as one-time purchases.
+
 ## Contents
 
 - [Official Resources](#official-resources)
@@ -72,7 +78,6 @@ Tools that try to separate skill from luck before you follow a wallet.
 
 ## Copy Trading
 
-- [PredCopy](https://predcopy.com/) - Whale tracking and composite trader scoring paired with an execution engine that mirrors a followed wallet under configurable bet sizing, max exposure, and stale position exit rules. Telegram alerts and an MCP server.
 - [CopyTrail](https://copytrail.org) - Mirrors top traders' on-chain fills into your own wallet, with a free paper mode to verify fills before going live and an ECIES-encrypted trading key.
 - [FrenFlow](https://www.frenflow.com/copytrading) - Non-custodial block-0 copy trading across Polymarket and Kalshi, mirroring a leader's fills in the same block via mempool detection. Per-trade stake caps and HFT-bot flagging.
 - [Polyfollow](https://www.polyfollow.com/) - Free-to-browse trader search and analytics with public wallet profiles, comparison tools, and automated copy trading. Copied taker trades carry a 0.5% fee; maker orders are free.
@@ -97,7 +102,6 @@ Tools that try to separate skill from luck before you follow a wallet.
 
 ### Strategy & Execution
 
-- [predtools](https://predtools.com/) - Source-available trading bots for Polymarket and Kalshi with a strategy library, sold as one-time purchases.
 - [polymarket-bot-lab](https://github.com/oraclemangle/polymarket-bot-lab) - Lab of 11 candidate strategies with CLOB clients, fee models, a backtest engine, and risk gates. Publishes confidence intervals and the strategies that lost money.
 - [antflow](https://antflow.live) - Autonomous trading bot with risk guardrails and disciplined exits, results shown on a public live wallet rather than a backtest.
 - [polymarket-settlement-bot](https://github.com/LuciferForge/polymarket-settlement-bot) - Auto-redeems resolved positions back to USDC.
@@ -110,7 +114,6 @@ Tools that try to separate skill from luck before you follow a wallet.
 
 ## Arbitrage & Cross-Platform
 
-- [PredRadar](https://predradar.com/) - Cross-platform aggregator for Polymarket, Kalshi, and Betfair with live prices, an arbitrage scanner, a JSON API, and an MCP server.
 - [OddsShift](https://oddsshift.com/) - Comparison across Polymarket and Kalshi with AI analysis of price divergences, arbitrage detection, and smart money tracking.
 - [VoxOdds](https://voxodds.com/polymarket-vs-kalshi) - Compares reviewed Polymarket and Kalshi contract pairs by all-in price for a set budget, fees included, and only pairs markets whose resolution rules match. Free web page and no-key MCP server; JSON API free for non-commercial use.
 - [PredMart](https://predmart.com) - Non-custodial margin account: trade with up to 5x leverage, or borrow USDC against prediction-market shares you already hold. Built on Polygon.
