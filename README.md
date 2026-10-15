@@ -6,21 +6,15 @@ Polymarket is a prediction market where users trade on the outcome of future eve
 
 **Every link here was checked on 2026-08-11.** Entries that 404, resolve to a parked domain, or point at a Chrome Web Store page that no longer exists have been removed rather than carried forward. If you find a dead link, [open an issue](../../issues).
 
-## Featured
-
-- [PredCopy](https://predcopy.com/) - Copy trading. Whale tracking and composite trader scoring paired with an execution engine that mirrors a followed wallet under configurable bet sizing, max exposure, and stale position exit rules. Telegram alerts and an MCP server.
-- [PredRadar](https://predradar.com/) - Arbitrage. Cross-platform aggregator for Polymarket, Kalshi, and Betfair with live prices, an arbitrage scanner, a JSON API, and an MCP server.
-- [predtools](https://predtools.com/) - Trading bots. Source-available trading bots for Polymarket and Kalshi with a strategy library, sold as one-time purchases.
-
 ## Contents
 
 - [Official Resources](#official-resources)
+- [Copy Trading](#copy-trading)
+- [Arbitrage & Cross-Platform](#arbitrage--cross-platform)
+- [Trading Bots & Automation](#trading-bots--automation)
 - [Whale Tracking](#whale-tracking)
 - [Trader Scoring & Wallet Analysis](#trader-scoring--wallet-analysis)
 - [General Analytics](#general-analytics)
-- [Copy Trading](#copy-trading)
-- [Trading Bots & Automation](#trading-bots--automation)
-- [Arbitrage & Cross-Platform](#arbitrage--cross-platform)
 - [Alerts](#alerts)
 - [API Libraries & SDKs](#api-libraries--sdks)
 - [Data APIs & Datasets](#data-apis--datasets)
@@ -41,6 +35,51 @@ Polymarket is a prediction market where users trade on the outcome of future eve
 - [Polymarket on GitHub](https://github.com/Polymarket) - Official repositories.
 - [Gamma API](https://gamma-api.polymarket.com/) - Market metadata and event data.
 - [CLOB API](https://clob.polymarket.com/) - Central limit order book, order placement and market data.
+
+## Copy Trading
+
+- [PredCopy](https://predcopy.com/) - Whale tracking and composite trader scoring paired with an execution engine that mirrors a followed wallet under configurable bet sizing, max exposure, and stale position exit rules. Telegram alerts and an MCP server.
+- [CopyTrail](https://copytrail.org) - Mirrors top traders' on-chain fills into your own wallet, with a free paper mode to verify fills before going live and an ECIES-encrypted trading key.
+- [FrenFlow](https://www.frenflow.com/copytrading) - Non-custodial block-0 copy trading across Polymarket and Kalshi, mirroring a leader's fills in the same block via mempool detection. Per-trade stake caps and HFT-bot flagging.
+- [Polyfollow](https://www.polyfollow.com/) - Free-to-browse trader search and analytics with public wallet profiles, comparison tools, and automated copy trading. Copied taker trades carry a 0.5% fee; maker orders are free.
+- [Polyman](https://t.me/PolymanApp_bot) - Telegram Mini App and web app for copy-trading top traders with AI-scored signals.
+- [Polycool](https://polycool.live/) - Tracks the top 0.5% of wallets and pushes big trades to Telegram for copy-trading.
+- [PolyBot](https://polybot.trading/) - Telegram interface for copying public Polymarket traders through a user-controlled Safe wallet, with configurable sizing, market filters, and daily caps. Standard fee: 1% of successful trade volume.
+- [Garnet](https://github.com/AndreySchurko/garnet-polymarket) - Self-hosted copy-trading engine in Rust that mirrors wallets you choose. Detects their trades three independent ways (RTDS websocket, /activity polling, Polygon logs), caps exposure per event, stops on a daily loss, and runs a shadow mode at real fees beside live. Telegram control; keys stay on your server. Source-available (BUSL-1.1), free for individuals.
+- [Whalidate](https://whalidate.com/) - Scores Polymarket wallets on settled trades, worst drawdown and share of profit from one trade, and copies new trades from the wallets you choose when they pass your rules (price band, slippage cap, categories, caps). Paper trading is free; live trading is a monthly or yearly plan with no per-trade fee.
+
+## Arbitrage & Cross-Platform
+
+- [PredRadar](https://predradar.com/) - Cross-platform aggregator for Polymarket, Kalshi, and Betfair with live prices, an arbitrage scanner, a JSON API, and an MCP server.
+- [OddsShift](https://oddsshift.com/) - Comparison across Polymarket and Kalshi with AI analysis of price divergences, arbitrage detection, and smart money tracking.
+- [VoxOdds](https://voxodds.com/polymarket-vs-kalshi) - Compares reviewed Polymarket and Kalshi contract pairs by all-in price for a set budget, fees included, and only pairs markets whose resolution rules match. Free web page and no-key MCP server; JSON API free for non-commercial use.
+- [PredMart](https://predmart.com) - Non-custodial margin account: trade with up to 5x leverage, or borrow USDC against prediction-market shares you already hold. Built on Polygon.
+
+## Trading Bots & Automation
+
+### Strategy & Execution
+
+- [predtools](https://predtools.com/) - Source-available trading bots for Polymarket and Kalshi with a strategy library, sold as one-time purchases.
+- [polymarket-bot-lab](https://github.com/oraclemangle/polymarket-bot-lab) - Lab of 11 candidate strategies with CLOB clients, fee models, a backtest engine, and risk gates. Publishes confidence intervals and the strategies that lost money.
+- [antflow](https://antflow.live) - Autonomous trading bot with risk guardrails and disciplined exits, results shown on a public live wallet rather than a backtest.
+- [polymarket-settlement-bot](https://github.com/LuciferForge/polymarket-settlement-bot) - Auto-redeems resolved positions back to USDC.
+
+### Official
+
+- [Polymarket Agents](https://github.com/Polymarket/agents) - Official AI agent framework with LLM integration and a modular architecture.
+- [poly-market-maker](https://github.com/Polymarket/poly-market-maker) - Official CLOB market maker with bands or AMM strategy, and Docker support.
+
+### Market Making
+
+- [poly-maker](https://github.com/warproxxx/poly-maker) - Automated market-making bot with Google Sheets configuration and position merging.
+- [polymarket-marketmaking](https://github.com/elielieli909/polymarket-marketmaking) - Band-based market-making bot with automated order management.
+- [polymm](https://github.com/kachence/polymm) - Sports market-making and arbitrage bot in Python. De-vigs sportsbook odds, quotes limit orders, and hedges to lock the arb.
+
+### Specialized
+
+- [Polymarket Weather Command Center](https://github.com/testedmedia/polymarket-weather-command-center) - Apache-2.0 dashboard for temperature markets: multi-model forecasts, live ASOS/METAR airport observations, bucket probabilities, and market edge across 41 cities.
+- [WinWeatherBot](https://winweatherbot.com) - Automated weather trading with a 138-model forecast ensemble, correlation-aware sizing, and sub-200ms execution.
+- [polymarket-odds-scanner](https://github.com/LuciferForge/polymarket-odds-scanner) - Finds mispriced sports markets by comparing Polymarket prices against sportsbook odds.
 
 ## Whale Tracking
 
@@ -75,48 +114,6 @@ Tools that try to separate skill from luck before you follow a wallet.
 - [Dune Analytics](https://dune.com/browse/dashboards?q=polymarket) - Community dashboards for volume, open interest, and user analytics.
 - [ClearMarket](https://github.com/JDSource/clearmarket) - Intelligence layer adding parsed resolution logic, catalyst calendars, and cross-platform mapping to raw Polymarket and Kalshi data.
 - [Kahyna](https://kahyna.com/) - Prediction-market terminal: markets from Polymarket, Kalshi, Manifold, PredictIt and Limitless in one book, matched by outcome, with the cost of a $100 order where it reads the order book, its own probability estimates, and Polymarket wallet records judged against the odds they paid, under a short label, never a full address. Free to read within a daily lookup limit (5 a day without an account, 15 with one); Pro is paid, unlimited and adds alerts.
-
-## Copy Trading
-
-- [CopyTrail](https://copytrail.org) - Mirrors top traders' on-chain fills into your own wallet, with a free paper mode to verify fills before going live and an ECIES-encrypted trading key.
-- [FrenFlow](https://www.frenflow.com/copytrading) - Non-custodial block-0 copy trading across Polymarket and Kalshi, mirroring a leader's fills in the same block via mempool detection. Per-trade stake caps and HFT-bot flagging.
-- [Polyfollow](https://www.polyfollow.com/) - Free-to-browse trader search and analytics with public wallet profiles, comparison tools, and automated copy trading. Copied taker trades carry a 0.5% fee; maker orders are free.
-- [Polyman](https://t.me/PolymanApp_bot) - Telegram Mini App and web app for copy-trading top traders with AI-scored signals.
-- [Polycool](https://polycool.live/) - Tracks the top 0.5% of wallets and pushes big trades to Telegram for copy-trading.
-- [PolyBot](https://polybot.trading/) - Telegram interface for copying public Polymarket traders through a user-controlled Safe wallet, with configurable sizing, market filters, and daily caps. Standard fee: 1% of successful trade volume.
-- [Garnet](https://github.com/AndreySchurko/garnet-polymarket) - Self-hosted copy-trading engine in Rust that mirrors wallets you choose. Detects their trades three independent ways (RTDS websocket, /activity polling, Polygon logs), caps exposure per event, stops on a daily loss, and runs a shadow mode at real fees beside live. Telegram control; keys stay on your server. Source-available (BUSL-1.1), free for individuals.
-- [Whalidate](https://whalidate.com/) - Scores Polymarket wallets on settled trades, worst drawdown and share of profit from one trade, and copies new trades from the wallets you choose when they pass your rules (price band, slippage cap, categories, caps). Paper trading is free; live trading is a monthly or yearly plan with no per-trade fee.
-
-## Trading Bots & Automation
-
-### Official
-
-- [Polymarket Agents](https://github.com/Polymarket/agents) - Official AI agent framework with LLM integration and a modular architecture.
-- [poly-market-maker](https://github.com/Polymarket/poly-market-maker) - Official CLOB market maker with bands or AMM strategy, and Docker support.
-
-### Market Making
-
-- [poly-maker](https://github.com/warproxxx/poly-maker) - Automated market-making bot with Google Sheets configuration and position merging.
-- [polymarket-marketmaking](https://github.com/elielieli909/polymarket-marketmaking) - Band-based market-making bot with automated order management.
-- [polymm](https://github.com/kachence/polymm) - Sports market-making and arbitrage bot in Python. De-vigs sportsbook odds, quotes limit orders, and hedges to lock the arb.
-
-### Strategy & Execution
-
-- [polymarket-bot-lab](https://github.com/oraclemangle/polymarket-bot-lab) - Lab of 11 candidate strategies with CLOB clients, fee models, a backtest engine, and risk gates. Publishes confidence intervals and the strategies that lost money.
-- [antflow](https://antflow.live) - Autonomous trading bot with risk guardrails and disciplined exits, results shown on a public live wallet rather than a backtest.
-- [polymarket-settlement-bot](https://github.com/LuciferForge/polymarket-settlement-bot) - Auto-redeems resolved positions back to USDC.
-
-### Specialized
-
-- [Polymarket Weather Command Center](https://github.com/testedmedia/polymarket-weather-command-center) - Apache-2.0 dashboard for temperature markets: multi-model forecasts, live ASOS/METAR airport observations, bucket probabilities, and market edge across 41 cities.
-- [WinWeatherBot](https://winweatherbot.com) - Automated weather trading with a 138-model forecast ensemble, correlation-aware sizing, and sub-200ms execution.
-- [polymarket-odds-scanner](https://github.com/LuciferForge/polymarket-odds-scanner) - Finds mispriced sports markets by comparing Polymarket prices against sportsbook odds.
-
-## Arbitrage & Cross-Platform
-
-- [OddsShift](https://oddsshift.com/) - Comparison across Polymarket and Kalshi with AI analysis of price divergences, arbitrage detection, and smart money tracking.
-- [VoxOdds](https://voxodds.com/polymarket-vs-kalshi) - Compares reviewed Polymarket and Kalshi contract pairs by all-in price for a set budget, fees included, and only pairs markets whose resolution rules match. Free web page and no-key MCP server; JSON API free for non-commercial use.
-- [PredMart](https://predmart.com) - Non-custodial margin account: trade with up to 5x leverage, or borrow USDC against prediction-market shares you already hold. Built on Polygon.
 
 ## Alerts
 
